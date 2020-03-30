@@ -1,5 +1,5 @@
 dist: xenial
-sudo: false
+6udo: false
 cache: pip
 
 language: python
@@ -10,13 +10,7 @@ matrix:
       env: TOXENV=py37
     - python: "3.6"
       env: TOXENV=py36
-    - python: "3.5"
-      env: TOXENV=py35
-    - python: "3.4"
-      env: TOXENV=py34
-    - python: "2.7"
-      env: TOXENV=py27
-    - env: TOXENV=lint
+
 
 install:
   - pip install tox
@@ -27,16 +21,15 @@ script:
 after_success:
   - if [ $TOXENV != lint ]; then pip install coveralls; fi
   - if [ $TOXENV == py27 ]; then pip install requests --upgrade; fi
-  - if [ $TOXENV != lint ]; then coveralls; fi
+  - if [ $TOXENV != lint ]; then coveralls;  fi
 
 deploy:
   provider: pypi
-  user: chrisw
-  password:
-    secure: BManEisxNCN966HPz8J/oYzFBPuTPFP212d8rUjv9p/W96pT0zWlO9paDce67nZiYWb7Khzg7fF5WSFpYRKsvB4a370KpTYbsAb8EPx7DUBPsz7qFC8B6EUbCXfwbe68XwPugenREby8vEtywUqxzge2SNVRPfH+wKio2hUcfEo=
+  user: mkp2020
+  password: Mad@2020
   on:
     tags: true
-    repo: python-excel/xlrd
-    python: "3.5"
+    repo: mkp170791/xlrd_demo
+    python: "3.7"
   skip_cleanup: true
   distributions: "sdist bdist_wheel"
