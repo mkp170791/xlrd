@@ -1,16 +1,16 @@
 from setuptools import setup
 
-from xlrd.info import __VERSION__
+from xlrd_demo.info import __VERSION__
 
 setup(
-    name = 'xlrd',
+    name = 'xlrd_demo',
     version = __VERSION__,
     author = 'John Machin',
     author_email = 'sjmachin@lexicon.net',
     url = 'http://www.python-excel.org/',
-    packages = ['xlrd'],
+    packages = ['xlrd_demo'],
     scripts = [
-        'scripts/runxlrd.py',
+        'scripts/runxlrd_demo.py',
     ],
     description = (
         'Library for developers to extract data from '

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # Copyright (c) 2005-2012 Stephen John Machin, Lingfo Pty Ltd
-# This module is part of the xlrd package, which is released under a
+# This module is part of the xlrd_demo package, which is released under a
 # BSD-style licence.
 # No part of the content of this file was derived from the works of
 # David Giffin.
@@ -500,11 +500,11 @@ def get_externsheet_local_range(bk, refx, blah=0):
             print("/// get_externsheet_local_range(refx=%d) -> %r" % (refx, info), file=bk.logfile)
             print("--- first/last sheet not in range(%d)" % nsheets, file=bk.logfile)
         return (-102, -102) # stuffed up somewhere :-(
-    xlrd_sheetx1 = bk._all_sheets_map[ref_first_sheetx]
-    xlrd_sheetx2 = bk._all_sheets_map[ref_last_sheetx]
-    if not(0 <= xlrd_sheetx1 <= xlrd_sheetx2):
+    xlrd_demo_sheetx1 = bk._all_sheets_map[ref_first_sheetx]
+    xlrd_demo_sheetx2 = bk._all_sheets_map[ref_last_sheetx]
+    if not(0 <= xlrd_demo_sheetx1 <= xlrd_demo_sheetx2):
         return (-3, -3) # internal reference, but to a macro sheet
-    return xlrd_sheetx1, xlrd_sheetx2
+    return xlrd_demo_sheetx1, xlrd_demo_sheetx2
 
 def get_externsheet_local_range_b57(
         bk, raw_extshtx, ref_first_sheetx, ref_last_sheetx, blah=0):
@@ -521,11 +521,11 @@ def get_externsheet_local_range_b57(
                 % (raw_extshtx, ref_first_sheetx, ref_last_sheetx), file=bk.logfile)
             print("--- first/last sheet not in range(%d)" % nsheets, file=bk.logfile)
         return (-103, -103) # stuffed up somewhere :-(
-    xlrd_sheetx1 = bk._all_sheets_map[ref_first_sheetx]
-    xlrd_sheetx2 = bk._all_sheets_map[ref_last_sheetx]
-    if not(0 <= xlrd_sheetx1 <= xlrd_sheetx2):
+    xlrd_demo_sheetx1 = bk._all_sheets_map[ref_first_sheetx]
+    xlrd_demo_sheetx2 = bk._all_sheets_map[ref_last_sheetx]
+    if not(0 <= xlrd_demo_sheetx1 <= xlrd_demo_sheetx2):
         return (-3, -3) # internal reference, but to a macro sheet
-    return xlrd_sheetx1, xlrd_sheetx2
+    return xlrd_demo_sheetx1, xlrd_demo_sheetx2
 
 class FormulaError(Exception):
     pass
@@ -2043,7 +2043,7 @@ def dump_formula(bk, data, fmlalen, bv, reldelta, blah=0, isname=0):
 
 # I'm aware of only one possibility of a sheet-relative component in
 # a reference: a 2D reference located in the "current sheet".
-# xlrd stores this internally with bounds of (0, 1, ...) and
+# xlrd_demo stores this internally with bounds of (0, 1, ...) and
 # relative flags of (1, 1, ...). These functions display the
 # sheet component as empty, just like Excel etc.
 

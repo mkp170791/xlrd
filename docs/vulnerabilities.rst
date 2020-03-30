@@ -5,12 +5,12 @@ If your code ingests ``.xlsx`` files that come from sources in which you do not
 have absolute trust, please be aware that ``.xlsx`` files are made up of XML
 and, as such, are susceptible to the vulnerabilities of XML.
 
-xlrd uses ElementTree to parse XML, but as you'll find if you look into it,
+xlrd_demo uses ElementTree to parse XML, but as you'll find if you look into it,
 there are many different ElementTree implementations. A good summary
 of vulnerabilities you should worry can be found here:
 :ref:`xml-vulnerabilities`.
 
-For clarity, xlrd will try and import ElementTree from the following sources.
+For clarity, xlrd_demo will try and import ElementTree from the following sources.
 The list is in priority order, with those earlier in the list being preferred
 to those later in the list:
 
@@ -43,7 +43,7 @@ __ https://pypi.org/project/defusedxml/
 
     import defusedxml
     from defusedxml.common import EntitiesForbidden
-    from xlrd import open_workbook
+    from xlrd_demo import open_workbook
     defusedxml.defuse_stdlib()
 
 

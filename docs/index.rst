@@ -1,7 +1,7 @@
-xlrd documentation
+xlrd_demo documentation
 ==================
 
-xlrd is a library for reading data and formatting information from Excel
+xlrd_demo is a library for reading data and formatting information from Excel
 files, whether they are .xls or .xlsx files.
 
 .. toctree::

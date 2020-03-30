@@ -1,12 +1,12 @@
-[![Build Status](https://travis-ci.org/python-excel/xlrd.svg?branch=master)](https://travis-ci.org/python-excel/xlrd)
-[![Coverage Status](https://coveralls.io/repos/github/python-excel/xlrd/badge.svg?branch=master)](https://coveralls.io/github/python-excel/xlrd?branch=master)
-[![Documentation Status](https://readthedocs.org/projects/xlrd/badge/?version=latest)](http://xlrd.readthedocs.io/en/latest/?badge=latest)
-[![PyPI version](https://badge.fury.io/py/xlrd.svg)](https://badge.fury.io/py/xlrd)
+[![Build Status](https://travis-ci.org/python-excel/xlrd_demo.svg?branch=master)](https://travis-ci.org/python-excel/xlrd_demo)
+[![Coverage Status](https://coveralls.io/repos/github/python-excel/xlrd_demo/badge.svg?branch=master)](https://coveralls.io/github/python-excel/xlrd_demo?branch=master)
+[![Documentation Status](https://readthedocs.org/projects/xlrd_demo/badge/?version=latest)](http://xlrd_demo.readthedocs.io/en/latest/?badge=latest)
+[![PyPI version](https://badge.fury.io/py/xlrd_demo.svg)](https://badge.fury.io/py/xlrd_demo)
 
-### xlrd
+### xlrd_demo
 
 PLEASE NOTE: This library currently has no active maintainers. You are advised to use [OpenPyXL](https://openpyxl.readthedocs.io/en/stable/) instead. If you absolutely have to read .xls files, then
-xlrd will probably still work for you, but please do not submit issues complaining that this library
+xlrd_demo will probably still work for you, but please do not submit issues complaining that this library
 will not read your corrupted or non-standard file. Just because Excel or some other piece of software opens your
 file does not mean it is a valid xls file.
 
@@ -20,7 +20,7 @@ For more background to this: https://groups.google.com/d/msg/python-excel/P6TjJg
 
 **Versions of Python supported**: 2.7, 3.4+.
 
-**Outside scope**: xlrd will safely and reliably ignore any of these if present in the file:
+**Outside scope**: xlrd_demo will safely and reliably ignore any of these if present in the file:
 
 *   Charts, Macros, Pictures, any other embedded object. WARNING: currently this includes embedded worksheets.
 *   VBA modules
@@ -33,8 +33,8 @@ For more background to this: https://groups.google.com/d/msg/python-excel/P6TjJg
 **Quick start**:
 
 ```python
-import xlrd
-book = xlrd.open_workbook("myfile.xls")
+import xlrd_demo
+book = xlrd_demo.open_workbook("myfile.xls")
 print("The number of worksheets is {0}".format(book.nsheets))
 print("Worksheet name(s): {0}".format(book.sheet_names()))
 sh = book.sheet_by_index(0)
@@ -46,7 +46,7 @@ for rx in range(sh.nrows):
 
 **Another quick start**: This will show the first, second and last rows of each sheet in each file:
 
-    python PYDIR/scripts/runxlrd.py 3rows *blah*.xls
+    python PYDIR/scripts/runxlrd_demo.py 3rows *blah*.xls
 
 **Acknowledgements**:
 

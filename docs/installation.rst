@@ -1,12 +1,12 @@
 Installation Instructions
 =========================
 
-If you want to experiment with xlrd, the easiest way to
+If you want to experiment with xlrd_demo, the easiest way to
 install it is to do the following in a virtualenv::
 
-  pip install xlrd
+  pip install xlrd_demo
 
-If your package uses setuptools and you decide to use xlrd,
+If your package uses setuptools and you decide to use xlrd_demo,
 then you should add it as a requirement by adding an ``install_requires``
 parameter in your call to ``setup`` as follows:
 
@@ -14,5 +14,5 @@ parameter in your call to ``setup`` as follows:
 
     setup(
         # other stuff here
-        install_requires=['xlrd'],
+        install_requires=['xlrd_demo'],
         )

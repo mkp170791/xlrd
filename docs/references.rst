@@ -1,7 +1,7 @@
 Named references, constants, formulas, and macros
 =================================================
 
-.. currentmodule:: xlrd.book
+.. currentmodule:: xlrd_demo.book
 
 
 A name is used to refer to a cell, a group of cells, a constant
@@ -25,7 +25,7 @@ when ``obj.macro`` is ``1``.
 
 In the examples directory you will find ``namesdemo.xls`` which
 showcases the many different ways that names can be used, and
-``xlrdnamesAPIdemo.py`` which offers 3 different queries for inspecting
+``xlrd_demonamesAPIdemo.py`` which offers 3 different queries for inspecting
 the names in your files, and shows how to extract whatever a name is
 referring to. There is currently one "convenience method",
 :meth:`Name.cell`, which extracts the value in the case where the name

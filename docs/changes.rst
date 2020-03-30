@@ -1,7 +1,7 @@
 Changes
 =======
 
-.. currentmodule:: xlrd
+.. currentmodule:: xlrd_demo
 
 1.2.0 (15 December 2018)
 ------------------------
@@ -23,7 +23,7 @@ Changes
 - Fix for "invalid literal for int() with base 10: 'true'" when reading some
   xlsx files.
 
-- Make xldate_as_datetime available to import direct from xlrd.
+- Make xldate_as_datetime available to import direct from xlrd_demo.
 
 - Build universal wheels.
 
@@ -292,7 +292,7 @@ Thanks to the following for their contributions to this release:
 + remove duplicate files that were out of date.
 + Basic support for Excel 2.0
 + Decouple Book init & load.
-+ runxlrd: minor fix for xfc.
++ runxlrd_demo: minor fix for xfc.
 + More Excel 2.x work.
 + is_date_format() tweak.
 + Better detection of IronPython.
@@ -310,7 +310,7 @@ Thanks to the following for their contributions to this release:
 + Warning message if sector sizes are extremely large.
 + Work around corrupt STYLE record
 + Added missing entry for blank cell type to ctype_text
-+ Added "fonts" command to runxlrd script
++ Added "fonts" command to runxlrd_demo script
 + Warning: style XF whose parent XF index != 0xFFF
 + Logfile arg wasn't being passed from open_workbook to
   compdoc.CompDoc.
@@ -320,7 +320,7 @@ Thanks to the following for their contributions to this release:
 ---------------------
 
 + Version number updated to 0.6.1
-+ Documented runxlrd.py commands in its usage message. Changed
++ Documented runxlrd_demo.py commands in its usage message. Changed
   commands: dump to biff_dump, count_records to biff_count.
 
 
@@ -351,12 +351,12 @@ Thanks to the following for their contributions to this release:
 + Fixed problems discovered with opening test files from Planmaker
   2006 (http://www.softmaker.com/english/ofwcomp_en.htm): (1) Four files
   have reduced size of PALETTE record (51 and 32 colours; Excel writes
-  56 always). xlrd now emits a NOTE to the logfile and continues. (2)
+  56 always). xlrd_demo now emits a NOTE to the logfile and continues. (2)
   FORMULA records use the Excel 2.x record code 0x0021 instead of
-  0x0221. xlrd now continues silently. (3) In two files, at the OLE2
+  0x0221. xlrd_demo now continues silently. (3) In two files, at the OLE2
   compound document level, the internal directory says that the length
   of the Short-Stream Container Stream is 16384 bytes, but the actual
-  contents are 11264 and 9728 bytes respectively. xlrd now emits a
+  contents are 11264 and 9728 bytes respectively. xlrd_demo now emits a
   WARNING to the logfile and continues.
 + After discussion with Daniel Rentz, the concept of two lists of XF
   (eXtended Format) objects (raw_xf_list and computed_xf_list) has been
@@ -393,7 +393,7 @@ Thanks to the following for their contributions to this release:
   supplied to the open_workbook() function. The cell records BLANK and
   MULBLANKS which contain no data, only formatting information, will
   continue to be ignored in the default (no formatting info) case.
-+ Ralph Heimburger reported a problem with xlrd being intolerant about
++ Ralph Heimburger reported a problem with xlrd_demo being intolerant about
   an Excel 4.0 file (created by "some web app") with a DIMENSIONS record
   that omitted Microsoft's usual padding with 2 unused bytes. Fixed.
 
@@ -411,11 +411,11 @@ Thanks to the following for their contributions to this release:
 0.6.0a3 (19 Sept 2006)
 ----------------------
 
-+ Names: minor bugfixes; added script xlrdnameAPIdemo.py
++ Names: minor bugfixes; added script xlrd_demonameAPIdemo.py
 + ROW records were being used as additional hints for sizing memory
   requirements. In some files the ROW records overstate the number of
   used columns, and/or there are ROW records for rows that have no data
-  in them. This would cause xlrd to report sheet.ncols and/or
+  in them. This would cause xlrd_demo to report sheet.ncols and/or
   sheet.nrows as larger than reasonably expected. Change: ROW records
   are ignored. The number of columns/rows is based solely on the highest
   column/row index seen in non-empty data records. Empty data records
@@ -441,14 +441,14 @@ Thanks to the following for their contributions to this release:
 + Sheet objects have two new convenience methods: col_values(colx,
   start_rowx=0, end_rowx=None) and the corresponding col_types.
   Suggested by Dennis O'Brien.
-+ BIFF 8 file missing its CODEPAGE record: xlrd will now assume
++ BIFF 8 file missing its CODEPAGE record: xlrd_demo will now assume
   utf_16_le encoding (the only possibility) and keep going.
 + Older files missing a CODEPAGE record: an exception will be raised.
   Thanks to Sergey Krushinsky for a sample file. The open_workbook()
   function has a new argument (encoding_override) which can be used if
   the CODEPAGE record is missing or incorrect (for example,
   codepage=1251 but the data is actually encoded in koi8_r). The
-  runxlrd.py script takes a corresponding -e argument, for example -e
+  runxlrd_demo.py script takes a corresponding -e argument, for example -e
   cp1251
 + Further work done on parsing "number formats". Thanks to Chris
   Withers for the ``"General_)"`` example.
@@ -483,7 +483,7 @@ Thanks to the following for their contributions to this release:
 
 + Gnumeric writes user-defined formats with format codes starting at
   50 instead of 164; worked around.
-+ Thanks to Didrik Pinte for reporting the need for xlrd to be more
++ Thanks to Didrik Pinte for reporting the need for xlrd_demo to be more
   tolerant of the idiosyncracies of other software, for supplying sample
   files, and for performing alpha testing.
 + '_' character in a format should be treated like an escape

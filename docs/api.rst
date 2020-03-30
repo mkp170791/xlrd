@@ -1,48 +1,48 @@
 API Reference
 =============
 
-xlrd
+xlrd_demo
 ----
 
-.. automodule:: xlrd
+.. automodule:: xlrd_demo
    :members:
 
-xlrd.biffh
+xlrd_demo.biffh
 ----------
 
-.. automodule:: xlrd.biffh
+.. automodule:: xlrd_demo.biffh
    :members:
 
-xlrd.book
+xlrd_demo.book
 ---------
 
-.. automodule:: xlrd.book
+.. automodule:: xlrd_demo.book
    :members:
 
-xlrd.compdoc
+xlrd_demo.compdoc
 ------------
 
-.. automodule:: xlrd.compdoc
+.. automodule:: xlrd_demo.compdoc
    :members:
 
-xlrd.formatting
+xlrd_demo.formatting
 ---------------
 
-.. automodule:: xlrd.formatting
+.. automodule:: xlrd_demo.formatting
    :members:
 
-xlrd.formula
+xlrd_demo.formula
 -------------
 
-.. automodule:: xlrd.formula
+.. automodule:: xlrd_demo.formula
    :members:
 
-xlrd.sheet
+xlrd_demo.sheet
 ----------
 
-.. currentmodule:: xlrd.sheet
+.. currentmodule:: xlrd_demo.sheet
 
-.. autoclass:: xlrd.sheet.Sheet
+.. autoclass:: xlrd_demo.sheet.Sheet
    :members:
    :exclude-members: gcw, col
 
@@ -50,18 +50,18 @@ xlrd.sheet
 
      Returns a sequence of the :class:`Cell` objects in the given column.
 
-   .. autoattribute:: xlrd.sheet.Sheet.gcw
+   .. autoattribute:: xlrd_demo.sheet.Sheet.gcw
       :annotation:
 
 
-.. automodule:: xlrd.sheet
+.. automodule:: xlrd_demo.sheet
    :members:
    :exclude-members: Sheet
 
-xlrd.xldate
+xlrd_demo.xldate
 -----------
 
-.. currentmodule:: xlrd.xldate
+.. currentmodule:: xlrd_demo.xldate
 
-.. automodule:: xlrd.xldate
+.. automodule:: xlrd_demo.xldate
    :members:

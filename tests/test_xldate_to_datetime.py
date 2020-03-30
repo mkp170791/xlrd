@@ -1,12 +1,12 @@
 ###############################################################################
 #
-# Tests for the xlrd xldate.xldate_as_datetime() function.
+# Tests for the xlrd_demo xldate.xldate_as_datetime() function.
 #
 
 import unittest
 from datetime import datetime
 
-from xlrd import xldate
+from xlrd_demo import xldate
 
 not_1904 = False
 is_1904 = True

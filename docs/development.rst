@@ -6,12 +6,12 @@ Development
 This package is developed using continuous integration which can be
 found here:
 
-https://travis-ci.org/python-excel/xlrd
+https://travis-ci.org/python-excel/xlrd_demo
 
 If you wish to contribute to this project, then you should fork the
 repository found here:
 
-https://github.com/python-excel/xlrd
+https://github.com/python-excel/xlrd_demo
 
 Once that has been done and you have a checkout, you can follow these
 instructions to perform various development tasks:
@@ -54,10 +54,10 @@ the virtualenv above, from the directory containing setup.py::
 Making a release
 ----------------
 
-To make a release, just update the version in ``xlrd.info.__VERSION__``,
-update the change log, tag it, push to https://github.com/python-excel/xlrd
+To make a release, just update the version in ``xlrd_demo.info.__VERSION__``,
+update the change log, tag it, push to https://github.com/python-excel/xlrd_demo
 and Travis CI should take care of the rest.
 
 Once the above is done, make sure to go to
-https://readthedocs.org/projects/xlrd/versions/
+https://readthedocs.org/projects/xlrd_demo/versions/
 and make sure the new release is marked as an Active Version.
