@@ -25,8 +25,8 @@ after_success:
 
 deploy:
   provider: pypi
-  user: mkp2020
-  password: Mad@2020
+  user: userName
+  password: Password
   on:
     tags: true
     repo: mkp170791/xlrd_demo
