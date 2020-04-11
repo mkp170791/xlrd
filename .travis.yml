@@ -24,12 +24,10 @@ after_success:
   - if [ $TOXENV != lint ]; then coveralls;  fi
 
 deploy:
-  provider: pypi
-  user: userName
-  password: Password
-  on:
-    tags: true
-    repo: mkp170791/xlrd_demo
-    python: "3.7"
+  provider: releases
+  api_key:
+    secure: 5cff25b635e595f89ed68c97487c1efcab77abd8
   skip_cleanup: true
   distributions: "sdist bdist_wheel"
+  file: dist/*
+  
