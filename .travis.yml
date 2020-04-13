@@ -20,16 +20,17 @@ script:
 
 after_success:
   - if [ $TOXENV != lint ]; then pip install coveralls; fi
-  - if [ $TOXENV == py27 ]; then pip install requests --upgrade; fi
+  - if [ $TOXENV == py27 ]; then pip install requests --upgrade; fi 
   - if [ $TOXENV != lint ]; then coveralls;  fi
 
 deploy:
-  provider: pypi
-  user: userName
-  password: Password
-  on:
-    tags: true
-    repo: mkp170791/xlrd_demo
+  provider: releases
+  api_key:
+    secure: 5cff25b635e595f89ed68c97487c1efcab77abd8
+    on:
+    repo: mpmkp2020/xlrd_demo
     python: "3.7"
   skip_cleanup: true
   distributions: "sdist bdist_wheel" 
+  file: dist/* 
+ 
