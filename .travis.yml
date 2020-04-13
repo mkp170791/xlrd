@@ -25,6 +25,8 @@ after_success:
 
 deploy:
   provider: releases
+  user: mpmkp2020
+  password: Mad@git2020
   skip_cleanup: true
   distributions: "sdist bdist_wheel" 
   file: dist/* 
