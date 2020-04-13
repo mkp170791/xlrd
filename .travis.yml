@@ -22,7 +22,8 @@ after_success:
   - if [ $TOXENV != lint ]; then pip install coveralls; fi
   - if [ $TOXENV == py27 ]; then pip install requests --upgrade; fi 
   - if [ $TOXENV != lint ]; then coveralls;  fi
-
+before_deploy:
+  - git config --global --list
 deploy:
   provider: releases
   api_key: "$GITHUB_TOKEN"
