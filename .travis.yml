@@ -25,7 +25,7 @@ after_success:
 
 deploy:
   provider: releases
-  token: 5cff25b635e595f89ed68c97487c1efcab77abd8
+  api_key: $GITHUB_TOKEN
   skip_cleanup: true
   distributions: "sdist bdist_wheel" 
   file: dist/* 
