@@ -38,7 +38,7 @@ deploy:
   api_key:
     secure: JOAbnuEAtAOymiCMyUtydbrkhtM3PeGOZyRmGH2o4zhrH4fwBh46pjnoJiKpx4J5FdZ97tbqtvYgM6dSyTaWFllAw2lv6BuvdLOxW6nJVViX9urOHCbjgdWsQkoxFLcakhbmqSpzw1Dev/N9aqtIsui6z9vWV2OMwReSpFnHotnYIPrZBKcJFaeZIpo9+X5jFU3MokrZoZITD07HmsftN+m9LIsdSlKY0778ueh6LgxOX78juUSMosBr718XmUAuXJwCvH16T+dKkAvwprBUCOnVVXBFwtFajxbVq6rEgtsEVgZgPHgKgMR8KF/1c9Oj48EOOnmJFy+GBdRPyokJKPjNW7LpIAwH4DsJFT2HLybzI9jsandGPG8/RCMa1nSSoRoz1lpORnOeZ1TxLnAvxuAni73ySrx3f918jyI0Ns2pUDM0iID/5GHHiLRBmh0QH4cxRFY4PrjAoDP/ndeb1xhMJ8Vsti+GkPub58aQtL/2McCBZRyLp05E0TnErtR5Y1WVyiySTc6rzy4+PdvkmX/HDtElgcWCvk5eusgFVAryEIeqJuwBCxNR1HBV5FtHAp2ehQzdZYj3Vcy9Bz6ZMUd7ermNLLQVihLS1fYwW/xbQnbGc5sIZC3jMscyv7eP0HgniRx8Dm8jS1rw3lt6+nP4mgTp6Rh455OzCGZ37B4=
   file_glob: true
-  file: ./dist/*
+  file: dist/*
   distributions: "sdist bdist_wheel"
   on:
     repo: mpmkp2020/xlrd_demo
