@@ -30,7 +30,7 @@ before_deploy:
   - git tag $TRAVIS_TAG
   - python setup.py bdist_wheel
   - pwd
-  - ls
+  - ls dist
   
 deploy:
   provider: releases
@@ -40,4 +40,5 @@ deploy:
   file_glob: true
   file: ./dist/*
   on:
+    tags: true
     repo: mpmkp2020/xlrd_demo
